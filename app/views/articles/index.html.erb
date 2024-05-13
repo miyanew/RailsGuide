@@ -3,7 +3,8 @@
 <ul>
   <% @articles.each do |article| %>
     <li>
-      <a href="/articles/<%= article.id %>">
+      <%# article_pathヘルパーは"/articles/#{article.id}"を返す。resourcesメソッドの機能?%>
+      <a href="<%= article_path(article) %>">
         <%= article.title %>
       </a>
     </li>
